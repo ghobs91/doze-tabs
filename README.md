@@ -8,16 +8,6 @@
 	<a target="_blank" href="https://addons.mozilla.org/en-US/firefox/addon/doze-tabs/">
 		<img src="https://img.shields.io/amo/v/snoozz?color=orange&logo=firefox-browser&label=firefox%20add-on" alt="Mozilla Add-on">
 	</a>
-	<a href="https://github.com/ghobs91/doze-tabs/releases/latest/">
-		<img alt="GitHub Latest Release" src="https://img.shields.io/github/v/release/ghobs91/doze-tabs?label=latest%20release">
-	</a>
-</div>
-<div align="center">
-	<img alt="GitHub Release Date" src="https://img.shields.io/github/release-date/ghobs91/doze-tabs?color=red">
-	<img alt="GitHub commits since latest release" src="https://img.shields.io/github/commits-since/ghobs91/doze-tabs/latest?color=9cf">
-	<a href="https://github.com/ghobs91/doze-tabs/blob/master/LICENSE">
-		<img src="https://img.shields.io/github/license/ghobs91/doze-tabs?color=lightgrey" alt="License">
-	</a>
 </div>
 
 
@@ -48,6 +38,4 @@ Orange: `#F3B845` | Pink: `#DF4E76`
 
 Doze Tabs is licensed under the [GNU GPLv3](https://github.com/ghobs91/doze-tabs/blob/master/LICENSE) license.
 
-Built by [rohan](https://rohan.xyz) in 2020/21
-
-[🍺 Buy me a beer](https://www.buymeacoffee.com/rohanb10)
+A fork of Snoozz Built by [rohan](https://rohan.xyz) in 2020/21
