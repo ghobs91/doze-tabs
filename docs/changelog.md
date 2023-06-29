@@ -88,7 +88,7 @@ snooze in background hotfix
 - Dark mode 🌚
 - Visualise available storage on the settings page
 - Add option to select time as "now" for [monday, weekend, next-week, next-month]
-- Webkit specific changes. [See how](https://github.com/rohanb10/snoozz-tab-snoozing/blob/master/docs/safari.md) to build for Safari (not distributed through app store)
+- Webkit specific changes. [See how](https://github.com/ghobs91/doze-tabs/blob/master/docs/safari.md) to build for Safari (not distributed through app store)
 
 **October 2020**
 #### 2.3.0

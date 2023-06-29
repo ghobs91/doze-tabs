@@ -17,7 +17,7 @@ You can build your own version of Doze Tabs for Safari. Here's how you do it:
 	- Allow [Unsigned Extensions](https://i.imgur.com/4l1piHd.png) in the **Develop** menu</details>
 
 
-- **Doze Tabs for Safari** ([latest release](https://github.com/rohanb10/snoozz-tab-snoozing/releases/latest))
+- **Doze Tabs for Safari** ([latest release](https://github.com/ghobs91/doze-tabs/releases/latest))
 	- The `activeTab` permission is used in place of `tabs` to minimise [access requests](https://developer.apple.com/documentation/safariservices/safari_web_extensions/managing_safari_web_extension_permissions) to the user.
 	- All unsupported WebExtension APIs are removed (`notifications`, `idle`, `commands`).
 
@@ -57,4 +57,4 @@ You can build your own version of Doze Tabs for Safari. Here's how you do it:
 - **UI bugs:**
 	This extension was designed for Chrome and Firefox, so things might look a teeny bit off.
     
-Find anything else broken? Leave a [bug report](https://github.com/rohanb10/snoozz-tab-snoozing/issues/new/choose). It would be extremely helpful if you could [open up the logs](https://i.imgur.com/9xYn5Ll.png) and give me [an error code](https://i.imgur.com/B6YJjJD.png) (screenshot or copy/paste, either is fine)
+Find anything else broken? Leave a [bug report](https://github.com/ghobs91/doze-tabs/issues/new/choose). It would be extremely helpful if you could [open up the logs](https://i.imgur.com/9xYn5Ll.png) and give me [an error code](https://i.imgur.com/B6YJjJD.png) (screenshot or copy/paste, either is fine)

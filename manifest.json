@@ -15,7 +15,7 @@
 	"browser_action": {
 		"default_popup": "html/popup.html"
 	},
-	"author": "Rohan Bhansali",
+	"author": "Andrew G",
 	"options_ui": {
 		"page": "html/settings.html",
 		"open_in_tab": true

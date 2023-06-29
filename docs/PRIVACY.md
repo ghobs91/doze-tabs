@@ -9,7 +9,7 @@ Visit the Doze Tabs website for a more detailed explanation the permissions requ
 #### Data Collection
 Doze Tabs collects a minimal amount of anonymous tracking data and sends it to an [open source server](https://github.com/rohanb10/snoozz-stats). All data collected can be visualised in full on the [Doze Tabs Stats](https://dozetabs.vercel.app/privacy.html) page.
 
-The few lines of code used to send this data can be found in the [`./scripts/poll.js`](https://github.com/rohanb10/snoozz-tab-snoozing/blob/master/scripts/poll.js). The data is initially sent from the `displayPreviewAnimation(...)` function in [`./scripts/popup.js`](https://github.com/rohanb10/snoozz-tab-snoozing/blob/master/scripts/popup.js) to [`./scripts/background.js`](https://github.com/rohanb10/snoozz-tab-snoozing/blob/master/scripts/background.js) using the WebExtension Runtime API `runtime.sendMessage(...)`. It is processed in the background so that the speed of the extension is not compromised in any way
+The few lines of code used to send this data can be found in the [`./scripts/poll.js`](https://github.com/ghobs91/doze-tabs/blob/master/scripts/poll.js). The data is initially sent from the `displayPreviewAnimation(...)` function in [`./scripts/popup.js`](https://github.com/ghobs91/doze-tabs/blob/master/scripts/popup.js) to [`./scripts/background.js`](https://github.com/ghobs91/doze-tabs/blob/master/scripts/background.js) using the WebExtension Runtime API `runtime.sendMessage(...)`. It is processed in the background so that the speed of the extension is not compromised in any way
 
 No other data is collected. Your snoozed urls, geolocations, ip addresses and even languages have never, and will never be used in any way.
 

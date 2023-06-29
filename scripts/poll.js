@@ -2,7 +2,7 @@
 	Doze Tabs collects a tiny amount of anonymous click data to help improve the extension in the future. The choice and time you have selected will be sent to the Doze Tabs server.
 	No other personal or identifiable data is transmitted or processed at all. All your tab urls, IP addresses, languages and geolocations never leave your device.
 
-	You can read more about this here: https://github.com/rohanb10/snoozz-tab-snoozing/blob/master/docs/PRIVACY.md
+	You can read more about this here: https://github.com/ghobs91/doze-tabs/blob/master/docs/PRIVACY.md
 
 	All data collected using this code is fully public and can be seen at https://dozetabs.vercel.app/stats.html
 	The source code for the server is also available publicly at https://github.com/rohanb10/snoozz-stats
