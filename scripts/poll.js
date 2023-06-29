@@ -4,12 +4,12 @@
 
 	You can read more about this here: https://github.com/rohanb10/snoozz-tab-snoozing/blob/master/docs/PRIVACY.md
 
-	All data collected using this code is fully public and can be seen at https://snoozz.me/stats.html
+	All data collected using this code is fully public and can be seen at https://dozetabs.vercel.app/stats.html
 	The source code for the server is also available publicly at https://github.com/rohanb10/snoozz-stats
 */
 
 function poll(choice) {
-	fetch('https://stats.snoozz.me/clicks', {
+	fetch('https://stats.dozetabs.vercel.app/clicks', {
 		method: 'POST',
 		body: choice,
 	});

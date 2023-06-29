@@ -5,13 +5,10 @@
 </p>
 
 <div align="center">
-	<a target="_blank" href="https://addons.mozilla.org/en-US/firefox/addon/snoozz/">
+	<a target="_blank" href="https://addons.mozilla.org/en-US/firefox/addon/doze-tabs/">
 		<img src="https://img.shields.io/amo/v/snoozz?color=orange&logo=firefox-browser&label=firefox%20add-on" alt="Mozilla Add-on">
-		</a>
-	<a target="_blank" href="https://chrome.google.com/webstore/detail/snoozz-snooze-tabs-window/lklendgldejcnkkaldoggoapclkepgfb">
-		<img src="https://img.shields.io/chrome-web-store/v/lklendgldejcnkkaldoggoapclkepgfb?logo=google-chrome&color=yellow&logoColor=white" alt="Chrome Web Store">
 	</a>
-	<a href="https://github.com/rohanb10/snoozz-tab-snoozing/releases/latest/">
+	<a href="https://github.com/ghobs91/doze-tabs/releases/latest/">
 		<img alt="GitHub Latest Release" src="https://img.shields.io/github/v/release/rohanb10/snoozz-tab-snoozing?label=latest%20release">
 	</a>
 </div>
@@ -30,9 +27,7 @@
 -------------
 
 
-A Web Extension to *snoozz* tabs and windows now and have them reopen automatically later.
-
-Check out the [Snoozz.me](https://snoozz.me) website for more features, screenshots, demo gifs, and the privacy policy (spoiler: nothing is tracked)
+A Web Extension to *snooze* tabs and windows now and have them reopen automatically later.
 
 Features:
 - Snooze individual tabs, selected tabs, or full windows in just two clicks
@@ -43,9 +38,7 @@ Features:
 
 I initially built this for myself. Had too many tabs open at the end of the day, and didnt want to look at them until work started the next day.
 
-Available on [Chrome](https://chrome.google.com/webstore/detail/snoozz-snooze-tabs-window/lklendgldejcnkkaldoggoapclkepgfb), [Firefox](https://addons.mozilla.org/en-US/firefox/addon/snoozz/), [Edge](https://microsoftedge.microsoft.com/addons/detail/ifofnjpbldmdcbkaalbdgaopphhlopok) and as a custom build for [Safari](https://github.com/rohanb10/snoozz-tab-snoozing/blob/master/docs/safari.md).
-
-[Latest Release](https://github.com/rohanb10/snoozz-tab-snoozing/releases/latest/) | [Changelog](https://snoozz.me/changelog) | [Browser Compatibility](https://snoozz.me/compatibility) | [Privacy](https://snoozz.me/privacy)
+[Privacy](https://dozetabs.vercel.app/privacy)
 
 Related repos: [Snoozz Website](https://github.com/rohanb10/snoozz-web) | [Snoozz Stats](https://github.com/rohanb10/snoozz-stats)
 

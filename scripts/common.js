@@ -506,7 +506,7 @@ var getFaviconUrl = url => {
 	// return `https://www.google.com/s2/favicons?sz=64&domain_url=${getHostname(url)}`;
 	return `https://besticon.herokuapp.com/icon?url=${getHostname(url)}&size=32..48..64&fallback_icon_color=${getColorForUrl(getHostname(url)).replace('#', '')}`;
 }
-var getColorForUrl = (url = 'snoozz.me') => colours[url.split('').map(c => c.charCodeAt(0)).reduce((a, b) => a + b) % 100];
+var getColorForUrl = (url = 'dozetabs.vercel.app') => colours[url.split('').map(c => c.charCodeAt(0)).reduce((a, b) => a + b) % 100];
 
 var getHostname = url => {
 	var h = Object.assign(document.createElement('a'), {href: url}).hostname;
