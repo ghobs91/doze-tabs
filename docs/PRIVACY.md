@@ -2,12 +2,12 @@
 
 #### Permissions
 
-Visit the Snoozz website for a more detailed explanation the permissions required:
+Visit the Doze Tabs website for a more detailed explanation the permissions required:
 
 [https://dozetabs.vercel.app/privacy.html](https://dozetabs.vercel.app/privacy.html)
 
 #### Data Collection
-Snoozz collects a minimal amount of anonymous tracking data and sends it to an [open source server](https://github.com/rohanb10/snoozz-stats). All data collected can be visualised in full on the [Snoozz Stats](https://dozetabs.vercel.app/privacy.html) page.
+Doze Tabs collects a minimal amount of anonymous tracking data and sends it to an [open source server](https://github.com/rohanb10/snoozz-stats). All data collected can be visualised in full on the [Doze Tabs Stats](https://dozetabs.vercel.app/privacy.html) page.
 
 The few lines of code used to send this data can be found in the [`./scripts/poll.js`](https://github.com/rohanb10/snoozz-tab-snoozing/blob/master/scripts/poll.js). The data is initially sent from the `displayPreviewAnimation(...)` function in [`./scripts/popup.js`](https://github.com/rohanb10/snoozz-tab-snoozing/blob/master/scripts/popup.js) to [`./scripts/background.js`](https://github.com/rohanb10/snoozz-tab-snoozing/blob/master/scripts/background.js) using the WebExtension Runtime API `runtime.sendMessage(...)`. It is processed in the background so that the speed of the extension is not compromised in any way
 

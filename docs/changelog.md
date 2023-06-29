@@ -36,14 +36,14 @@ PRs and other ideas are welcome.
 
 #### 2.4.4
 - Use minutes in your 'Morning' and 'Evening' times (Can set as 8:45am instead of 9:00am)
-- Choose 'Morning', 'Evening' or 'Now' times directly from the Snoozz popup, right click menu, and key bindings
+- Choose 'Morning', 'Evening' or 'Now' times directly from the Doze Tabs popup, right click menu, and key bindings
 - Update Animal icons to be more consistent
-- Snoozz will now wait for a network connection before reopening tabs after your device wakes up
+- Doze Tabs will now wait for a network connection before reopening tabs after your device wakes up
 
 #### 2.4.3
 - Enable / Disable notifications from the settings page
 - Stop saving favicons in storage and lazily fetch them instead via DuckDuckGo when displaying in the Nap Room
-- Count selected choices and display data publicly on [Snoozz Stats](https://snoozz.me/stats.html)
+- Count selected choices and display data publicly on [Doze Tabs Stats](https://snoozz.me/stats.html)
 - Reduce overall file size
 
 **May 2021**
@@ -61,7 +61,7 @@ PRs and other ideas are welcome.
 - misc ui related fixes
 
 #### 2.4.0
-- Edit Snoozz times for sleeping tabs 🎉
+- Edit Doze Tabs times for sleeping tabs 🎉
 - Snooze Again for awoken tabs
 - New Date and Time picker for custom snooze time selection
 - Snooze selected tabs (and a new UI for selecting snooze targets)
@@ -106,7 +106,7 @@ snooze in background hotfix
 - Bug fixes, minor UI adjustments
 
 #### 2.1.2
-- Change the Snoozz logo font (Slightly modified version of Bungee by [David Jonathan Ross](https://djr.com/))
+- Change the Doze Tabs logo font (Slightly modified version of Bungee by [David Jonathan Ross](https://djr.com/))
 - Make use of the Idle API for more reliable waking up of tabs and windows
 - Allow UI animation when closing a popup to be customised in the settings menu
 - Show snoozz contextmenu when clicking on a tab in the tab bar (FF only)

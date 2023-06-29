@@ -13,7 +13,7 @@ with open('manifest.json') as m:
 	data = json.load(m)
 VERSION = data['version']
 
-print('\n\nBuilding Snoozz \x1b[1;31;34mv' + VERSION + '\x1b[0m\n');
+print('\n\nBuilding Doze Tabs \x1b[1;31;34mv' + VERSION + '\x1b[0m\n');
 
 #
 #	delete old files if they exist
@@ -93,7 +93,7 @@ print('\n\nCreated Chrome Release: ' + '\x1b[35m ' + name + '.zip' + '\x1b[0m')
 # Add Open popup shortcut to start of manifest.commands
 #
 del data['offline_enabled']
-mod_commands = {'_execute_browser_action' : {'description': 'Open the Snoozz popup'}}
+mod_commands = {'_execute_browser_action' : {'description': 'Open the Doze Tabs popup'}}
 for key, value in data['commands'].items(): mod_commands[key] = value
 
 data['commands'] = mod_commands

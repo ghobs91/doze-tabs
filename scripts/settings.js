@@ -98,7 +98,7 @@ async function save(e) {
 	if (e && e.target.id === 'history') {
 		var tabs = await getSnoozedTabs();
 		var count = tabs.filter(t => t.opened && dayjs().isAfter(dayjs(t.opened).add(e.target.value, 'd'))).length;
-		if (count > 0 && !window.confirm(`Changing this setting will remove ${count} tab${count > 1 ? 's' : ''} from your Snoozz history. Are you sure you want to continue with this change?`)) {
+		if (count > 0 && !window.confirm(`Changing this setting will remove ${count} tab${count > 1 ? 's' : ''} from your Doze Tabs history. Are you sure you want to continue with this change?`)) {
 			return e.target.value = e.target.getAttribute('data-orig-value');
 		}
 	}
@@ -247,7 +247,7 @@ async function importTabs(e) {
 function fillAbout() {
 	var emojis = ['🥭', '🌶️', '🍛', '🐅', '🐘', '🦚', '🍄', '☔', '🏏', '🚃', '🛺', '🪁', '🪔'];
 	document.querySelector('.emoji').innerText = emojis[[Math.floor(Math.random() * emojis.length)]];
-	document.getElementById('version').innerText = `Snoozz v${chrome.runtime.getManifest().version}`;
+	document.getElementById('version').innerText = `Doze Tabs v${chrome.runtime.getManifest().version}`;
 }
 
 window.onload = initialize

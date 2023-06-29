@@ -1,7 +1,7 @@
 # snoozz
 
 <p align="center">
-  <img src="https://i.imgur.com/h6piEH8.png" alt="Snoozz logo"/>
+  <img src="https://i.imgur.com/h6piEH8.png" alt="Doze Tabs logo"/>
 </p>
 
 <div align="center">
@@ -40,7 +40,7 @@ I initially built this for myself. Had too many tabs open at the end of the day,
 
 [Privacy](https://dozetabs.vercel.app/privacy)
 
-Related repos: [Snoozz Website](https://github.com/rohanb10/snoozz-web) | [Snoozz Stats](https://github.com/rohanb10/snoozz-stats)
+Related repos: [Doze Tabs Website](https://github.com/rohanb10/snoozz-web) | [Doze Tabs Stats](https://github.com/rohanb10/snoozz-stats)
 
 
 ## Colours
@@ -49,7 +49,7 @@ Orange: `#F3B845` | Pink: `#DF4E76`
 
 ## License
 
-Snoozz is licensed under the [GNU GPLv3](https://github.com/rohanb10/snoozz-tab-snoozing/blob/master/LICENSE) license.
+Doze Tabs is licensed under the [GNU GPLv3](https://github.com/rohanb10/snoozz-tab-snoozing/blob/master/LICENSE) license.
 
 Built by [rohan](https://rohan.xyz) in 2020/21
 

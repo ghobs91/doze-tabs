@@ -1,12 +1,12 @@
-# Using Snoozz with Safari
+# Using Doze Tabs with Safari
 
 <div align="center">
-	<img src="https://i.imgur.com/wzYR5gz.png" alt="Snoozz x Safari">
+	<img src="https://i.imgur.com/wzYR5gz.png" alt="Doze Tabs x Safari">
 </div><br><br>
 
 I'm not paying Apple a hundred bucks a year for the privilege of publishing my free, open source extension in their App Store.
 
-You can build your own version of Snoozz for Safari. Here's how you do it:
+You can build your own version of Doze Tabs for Safari. Here's how you do it:
 
 ### Requirements
 - **MacOS 10.14.6+**
@@ -17,7 +17,7 @@ You can build your own version of Snoozz for Safari. Here's how you do it:
 	- Allow [Unsigned Extensions](https://i.imgur.com/4l1piHd.png) in the **Develop** menu</details>
 
 
-- **Snoozz for Safari** ([latest release](https://github.com/rohanb10/snoozz-tab-snoozing/releases/latest))
+- **Doze Tabs for Safari** ([latest release](https://github.com/rohanb10/snoozz-tab-snoozing/releases/latest))
 	- The `activeTab` permission is used in place of `tabs` to minimise [access requests](https://developer.apple.com/documentation/safariservices/safari_web_extensions/managing_safari_web_extension_permissions) to the user.
 	- All unsupported WebExtension APIs are removed (`notifications`, `idle`, `commands`).
 
@@ -29,7 +29,7 @@ You can build your own version of Snoozz for Safari. Here's how you do it:
 
 ### Advanced Installation
 
-1. In Terminal, navigate into the downloaded (unzipped) `Snoozz for Safari` directory and [convert the extension]((https://developer.apple.com/documentation/safariservices/safari_web_extensions/converting_a_web_extension_for_safari)) to an Xcode package using this command:
+1. In Terminal, navigate into the downloaded (unzipped) `Doze Tabs for Safari` directory and [convert the extension]((https://developer.apple.com/documentation/safariservices/safari_web_extensions/converting_a_web_extension_for_safari)) to an Xcode package using this command:
 ```
 	xcrun safari-web-extension-converter . --app-name "snoozz_for_safari"  --bundle-identifier com.snoozeman.snoozz --swift --force --no-open
 ```

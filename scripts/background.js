@@ -97,7 +97,7 @@ async function setUpContextMenus(cachedMenus) {
 		await chrome.contextMenus.create({
 			id: cm[0], 
 			contexts: contexts, 
-			title: `Snoozz ${choices[cm[0]].label.toLowerCase()}`, 
+			title: `Doze Tabs ${choices[cm[0]].label.toLowerCase()}`, 
 			documentUrlPatterns: ['<all_urls>'],
 			...(getBrowser() === 'firefox') ? {icons: {32: `../icons/${cm[0]}.png`}} : {}
 		});
@@ -200,7 +200,7 @@ chrome.runtime.onInstalled.addListener(async details => {
 	if (details && details.reason && details.reason == 'update' && details.previousVersion && details.previousVersion != chrome.runtime.getManifest().version) {
 		if (chrome.runtime.getManifest().version.search(/^\d{1,3}(\.\d{1,3}){1,2}$/) !== 0) return;		// skip if minor version
 		await new Promise(r => chrome.storage.local.set({'updated': true}, r));
-		if (chrome.notifications) createNotification(null, 'Snoozz has been updated', 'icons/logo.svg', 'Click here to see what\'s new.', true);
+		if (chrome.notifications) createNotification(null, 'Doze Tabs has been updated', 'icons/logo.svg', 'Click here to see what\'s new.', true);
 	}
 });
 chrome.runtime.onStartup.addListener(init);

@@ -15,7 +15,7 @@ Chrome and Edge are both built on top of Chromium so they are effectively the sa
 | Display icons next to snooze times |  |  | ✓ |  |
 | **Keyboard Shortcuts** |  |  |  |  |
 | Snooze tabs using keyboard shortcuts | ✓ | ✓ | ✓ |  |
-| Open Snoozz using keyboard shortcuts | ✓ | ✓ | ✓ |  |
+| Open Doze Tabs using keyboard shortcuts | ✓ | ✓ | ✓ |  |
 | **Popup** |  |  |  |  |
 | Use the popup to select a time to to snooze tabs/windows | ✓ | ✓ | ✓ | ✓ |
 | Disable options when tabs or windows cannot be snoozed | ✓ | ✓ | ✓ | ✓ |
