@@ -126,12 +126,12 @@ async function snoozeInBackground(item, tab) {
 	
 	var isHref = item.linkUrl && item.linkUrl.length;
 	var url = isHref ? item.linkUrl : item.pageUrl;
-	if(!isValid({url})) return createNotification(null, `Can't snoozz that :(`, 'icons/logo.svg', 'The link you are trying to snooze is invalid.', true);
+	if(!isValid({url})) return createNotification(null, `Can't doze that :(`, 'icons/logo.svg', 'The link you are trying to snooze is invalid.', true);
 
 	var snoozeTime = c && c.time;
 	if (c && ['weekend', 'monday', 'week', 'month'].includes(item.menuItemId)) snoozeTime = await getTimeWithModifier(item.menuItemId);
 	if (!snoozeTime || c.disabled || dayjs().isAfter(dayjs(snoozeTime))) {
-		return createNotification(null, `Can't snoozz that :(`, 'icons/logo.svg', 'The time you have selected is invalid.', true);
+		return createNotification(null, `Can't doze that :(`, 'icons/logo.svg', 'The time you have selected is invalid.', true);
 	}
 	// add attributes
 	var startUp = item.menuItemId === 'startup' ? true : undefined;
