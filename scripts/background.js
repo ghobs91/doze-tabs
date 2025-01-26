@@ -144,14 +144,14 @@ async function setUpContextMenus(cachedMenus) {
   } else {
     await chrome.contextMenus.removeAll();
     await chrome.contextMenus.create({
-      id: "snoozz",
+      id: "doze",
       contexts: contexts,
-      title: "Snoozz",
+      title: "Doze",
       documentUrlPatterns: ["<all_urls>"],
     });
     for (var o of cm)
       await chrome.contextMenus.create({
-        parentId: "snoozz",
+        parentId: "doze",
         id: o,
         contexts: contexts,
         title: choices[o].menuLabel,

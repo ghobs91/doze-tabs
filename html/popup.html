@@ -1,109 +1,167 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>snoozz</title>
-	<link rel="stylesheet" href="../styles/common.css" />
-	<link rel="stylesheet" href="../styles/checkbox.css" />
-	<link rel="stylesheet" href="../styles/popup.css" />
-	<link rel="stylesheet" href="../styles/flatpickr.css" />
-</head>
-<body>
-	<h3 class="center">Snooze What?</h3>
-	<div class="flex header">
-		<div id="targets" class="flex">
-			<div id="tab" class="target disabled"><span>This Tab</span></div>
-			<div id="window" class="target disabled"><span>Window</span></div>
-			<div id="selection" class="target disabled"><span>Selected</span></div>
-			<div id="group" class="target disabled"><span>Group</span></div>
-		</div>
-		<div id="preview" class="flex">
-			<img id="preview-favicon" src="../icons/unknown.png"><div id="preview-text">¿ ?</div>
-		</div>
-	</div>
-	<h3 class="center">When?</h3>
-	<div class="section choices">
-		<div class="form-overlay">
-			<span class="overlay-close-btn">&times;</span>
-			<div class="repeat-container hidden">
-				<div class="repeat-section">
-					<div class="repeat-interval-picker flex">
-						<div data-type="weekly" class="repeat-interval active">Weekly</div>
-						<div data-type="monthly" class="repeat-interval">Monthly</div>
-					</div>
-					<div class="repeat-week-wrapper r-section"><div></div></div>
-					<div class="repeat-month-wrapper r-section hidden"><div id="monthly"></div></div>
-				</div>
-				<div class="repeat-time-wrapper">
-					<div id="repeat-time"></div>
-					<div class="flex reset-container"><div class="reset-action">Reset</div></div>
-					<div class="quick-actions">
-						<h3 class="center">Quick Actions</h3>
-						<div class="flex">
-							<div class="action" data-value="morning">Morning</div>
-							<div class="action" data-value="now">Now</div>
-							<div class="action" data-value="evening">Evening</div>
-						</div>
-					</div>
-					<h3>Next Wakeup</h3>
-					<div id="next-wakeup">-</div>
-				</div>
-			</div>
-			<div class="date-wrapper"><div id="date"></div></div>
-			<div class="time-wrapper">
-				<div id="time"></div>
-				<div class="flex reset-container"><div class="reset-action">Reset</div></div>
-				<div class="quick-actions">
-					<h3 class="center">Quick Actions</h3>
-					<div class="flex">
-						<div class="action" data-value="5">+5 mins</div>
-						<div class="action" data-value="60">+1 hour</div>
-						<div class="action" data-value="1440">+1 day</div>
-					</div>
-					<div class="flex">
-						<div class="action" data-value="-5">-5 mins</div>
-						<div class="action" data-value="-60">-1 hour</div>
-						<div class="action" data-value="-1440">-1 day</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="section special-choices">
-		<div class="repeat-choice-overlay flex">
-			<div class="repeat-choice flex">
-				<label class="checkbox path popup-checkbox flex">
-					<input id="repeat" type="checkbox" tabindex="0">
-					<svg viewBox="0 0 21 21">
-						<path d="M5 10.75 8.5 14.25 19.4 2.3C18.83 1.43 18.03 1 17 1L4 1C2.35 1 1 2.35 1 4L1 17C1 18.65 2.35 20 4 20L17 20C18.65 20 20 18.65 20 17L20 7.99"></path>
-					</svg>
-					<span>Repeat ?</span>
-				</label>
-			</div>
-		</div>
-	</div>
-	<div class="footer flex">
-		<div class="flex">
-			<div class="center"><img id="icon" src="../icons/logo.svg"></div>
-			<div class="empty"><img src="../icons/transparent.png"></div>
-		</div>
-		<div>
-			<a><span tabindex="0" class="nap-room-btn" data-href="/html/nap-room.html">See Sleeping Tabs</span></a>
-			<span class="upcoming" data-today=""></span>
-		</div>
-		<div class="flex">
-			<div class="keyboard show" tabindex="0"><img src="../icons/keyboard.png"></div>
-			<div class="shortcut-overlay"><div class="shortcuts"><div class="borders"></div><div class="keys"></div></div></div>
-			<div class="settings" tabindex="0" data-href="/html/settings.html" data-hover="Settings">
-				<img data-href="/html/settings.html" src="../icons/settings.png">
-			</div>
-		</div>
-	</div>
-	<script type="text/javascript" src="../scripts/dayjs.min.js"></script>
-	<script type="text/javascript" src="../scripts/flatpickr.min.js"></script>
-	<script type="text/javascript" src="../scripts/gradient.min.js"></script>
-	<script type="text/javascript" src="../scripts/common.js"></script>
-	<script type="text/javascript" src="../scripts/popup.js"></script>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>doze</title>
+        <link rel="stylesheet" href="../styles/common.css" />
+        <link rel="stylesheet" href="../styles/checkbox.css" />
+        <link rel="stylesheet" href="../styles/popup.css" />
+        <link rel="stylesheet" href="../styles/flatpickr.css" />
+    </head>
+    <body>
+        <h3 class="center">Snooze What?</h3>
+        <div class="flex header">
+            <div id="targets" class="flex">
+                <div id="tab" class="target disabled">
+                    <span>This Tab</span>
+                </div>
+                <div id="window" class="target disabled">
+                    <span>Window</span>
+                </div>
+                <div id="selection" class="target disabled">
+                    <span>Selected</span>
+                </div>
+                <div id="group" class="target disabled"><span>Group</span></div>
+            </div>
+            <div id="preview" class="flex">
+                <img id="preview-favicon" src="../icons/unknown.png" />
+                <div id="preview-text">¿ ?</div>
+            </div>
+        </div>
+        <h3 class="center">When?</h3>
+        <div class="section choices">
+            <div class="form-overlay">
+                <span class="overlay-close-btn">&times;</span>
+                <div class="repeat-container hidden">
+                    <div class="repeat-section">
+                        <div class="repeat-interval-picker flex">
+                            <div
+                                data-type="weekly"
+                                class="repeat-interval active"
+                            >
+                                Weekly
+                            </div>
+                            <div data-type="monthly" class="repeat-interval">
+                                Monthly
+                            </div>
+                        </div>
+                        <div class="repeat-week-wrapper r-section">
+                            <div></div>
+                        </div>
+                        <div class="repeat-month-wrapper r-section hidden">
+                            <div id="monthly"></div>
+                        </div>
+                    </div>
+                    <div class="repeat-time-wrapper">
+                        <div id="repeat-time"></div>
+                        <div class="flex reset-container">
+                            <div class="reset-action">Reset</div>
+                        </div>
+                        <div class="quick-actions">
+                            <h3 class="center">Quick Actions</h3>
+                            <div class="flex">
+                                <div class="action" data-value="morning">
+                                    Morning
+                                </div>
+                                <div class="action" data-value="now">Now</div>
+                                <div class="action" data-value="evening">
+                                    Evening
+                                </div>
+                            </div>
+                        </div>
+                        <h3>Next Wakeup</h3>
+                        <div id="next-wakeup">-</div>
+                    </div>
+                </div>
+                <div class="date-wrapper"><div id="date"></div></div>
+                <div class="time-wrapper">
+                    <div id="time"></div>
+                    <div class="flex reset-container">
+                        <div class="reset-action">Reset</div>
+                    </div>
+                    <div class="quick-actions">
+                        <h3 class="center">Quick Actions</h3>
+                        <div class="flex">
+                            <div class="action" data-value="5">+5 mins</div>
+                            <div class="action" data-value="60">+1 hour</div>
+                            <div class="action" data-value="1440">+1 day</div>
+                        </div>
+                        <div class="flex">
+                            <div class="action" data-value="-5">-5 mins</div>
+                            <div class="action" data-value="-60">-1 hour</div>
+                            <div class="action" data-value="-1440">-1 day</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section special-choices">
+            <div class="repeat-choice-overlay flex">
+                <div class="repeat-choice flex">
+                    <label class="checkbox path popup-checkbox flex">
+                        <input id="repeat" type="checkbox" tabindex="0" />
+                        <svg viewBox="0 0 21 21">
+                            <path
+                                d="M5 10.75 8.5 14.25 19.4 2.3C18.83 1.43 18.03 1 17 1L4 1C2.35 1 1 2.35 1 4L1 17C1 18.65 2.35 20 4 20L17 20C18.65 20 20 18.65 20 17L20 7.99"
+                            ></path>
+                        </svg>
+                        <span>Repeat ?</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="footer flex">
+            <div class="flex">
+                <div class="center">
+                    <img id="icon" src="../icons/logo.svg" />
+                </div>
+                <div class="empty"><img src="../icons/transparent.png" /></div>
+            </div>
+            <div>
+                <a
+                    ><span
+                        tabindex="0"
+                        class="nap-room-btn"
+                        data-href="/html/nap-room.html"
+                        >See Sleeping Tabs</span
+                    ></a
+                >
+                <span class="upcoming" data-today=""></span>
+            </div>
+            <div class="flex">
+                <div class="keyboard show" tabindex="0">
+                    <img src="../icons/keyboard.png" />
+                </div>
+                <div class="shortcut-overlay">
+                    <div class="shortcuts">
+                        <div class="borders"></div>
+                        <div class="keys"></div>
+                    </div>
+                </div>
+                <div
+                    class="settings"
+                    tabindex="0"
+                    data-href="/html/settings.html"
+                    data-hover="Settings"
+                >
+                    <img
+                        data-href="/html/settings.html"
+                        src="../icons/settings.png"
+                    />
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../scripts/dayjs.min.js"></script>
+        <script
+            type="text/javascript"
+            src="../scripts/flatpickr.min.js"
+        ></script>
+        <script
+            type="text/javascript"
+            src="../scripts/gradient.min.js"
+        ></script>
+        <script type="text/javascript" src="../scripts/common.js"></script>
+        <script type="text/javascript" src="../scripts/popup.js"></script>
+    </body>
 </html>

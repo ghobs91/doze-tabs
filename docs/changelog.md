@@ -43,20 +43,19 @@ PRs and other ideas are welcome.
 #### 2.4.3
 - Enable / Disable notifications from the settings page
 - Stop saving favicons in storage and lazily fetch them instead via DuckDuckGo when displaying in the Nap Room
-- Count selected choices and display data publicly on [Doze Tabs Stats](https://snoozz.me/stats.html)
 - Reduce overall file size
 
 **May 2021**
 #### 2.4.2.1
 - Bug fixes in the Nap Room
 
-#### 2.4.2 
+#### 2.4.2
 - Introducing Icon Themes - Starting with a shiny new Animal theme. Change your theme on the Settings page.
 - Setting to choose between 12 Hour / 24 Hour time formats
 - Open links from the Nap Room without waking up a tab
 - Bug fixes on the Rise and Shine page
 
-#### 2.4.1 
+#### 2.4.1
 - show number of search results in the nap room
 - misc ui related fixes
 
@@ -93,7 +92,7 @@ snooze in background hotfix
 **October 2020**
 #### 2.3.0
 - First release on Microsoft Edge 🎉
-- Add Search to the Dashboard -> `urls | titles | snooze date | wake up date | day of week | month | relative time | snoozz state`
+- Add Search to the Dashboard -> `urls | titles | snooze date | wake up date | day of week | month | relative time | doze state`
 - Add live clock css/js animation to the Dashboard when no tabs are found.
 - Onboarding instructions UI on the Dashboard (shown when no tabs in storage).
 - Change copy on settings page to make easier to comprehend.
@@ -109,7 +108,7 @@ snooze in background hotfix
 - Change the Doze Tabs logo font (Slightly modified version of Bungee by [David Jonathan Ross](https://djr.com/))
 - Make use of the Idle API for more reliable waking up of tabs and windows
 - Allow UI animation when closing a popup to be customised in the settings menu
-- Show snoozz contextmenu when clicking on a tab in the tab bar (FF only)
+- Show doze contextmenu when clicking on a tab in the tab bar (FF only)
 - Show icons in contextmenu and disable icons that are invalid (FF only)
 - Restructure files in repository
 
@@ -158,7 +157,7 @@ snooze in background hotfix
 - Fix notification bug when reopening tab
 
 #### 1.0.2
-- Fix option to change history deletion duration 
+- Fix option to change history deletion duration
 
 #### 1.0.1
 - Fix error on startup with no settings initialized in local storage

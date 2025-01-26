@@ -12,5 +12,5 @@ echo Succesfully built Doze Tabs for Safari
 echo Next Steps:
 echo "1. Enable the Develop menu in Safari > Preferences > Advanced"
 echo "2. In the Develop menu, click Allow Unsigned Extensions"
-echo "3. In Safari > Preferences > Extensions, enable Snoozz"
+echo "3. In Safari > Preferences > Extensions, enable Doze"
 echo ""

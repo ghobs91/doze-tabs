@@ -1,350 +1,588 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>settings | snoozz</title>
-	<link rel="icon" type="image/png" sizes="96x96" href="../icons/ext-icon-128.png">
-	<link rel="stylesheet" href="../styles/common.css" />
-	<link rel="stylesheet" href="../styles/settings.css" />
-</head>
-<body>
-	<div class="scroll-logo hidden"><img src="../icons/logo.svg"></div>
-	<div class="flex center">
-		<img class="snoozz-logo hoverable" src="../icons/logo.svg">
-		<img class="snoozz-text" src="../icons/snoozz.png">
-	</div>
-	<div tabindex="0" class="nap-room" data-href="/html/nap-room.html" data-hover="See your sleeping tabs"><img data-href="/html/nap-room.html" src="../icons/human/nap-room.png"></div>
-	<div class="settings-container">
-		<h2 class="center"><span>Settings</span></h2><br>
-		<div class="input-container flex">
-			<div>
-				<h4>Morning time</h4>
-				<p>Choose the default hour to display for the morning.</p>
-			</div>
-			<div class="flex">
-				<div class="select-wrapper"><select class="am-pm" id="morning_h">
-					<option value="0">12</option>
-					<option value="1">1</option>
-					<option value="2">2</option>
-					<option value="3">3</option>
-					<option value="4">4</option>
-					<option value="5">5</option>
-					<option value="6">6</option>
-					<option value="7">7</option>
-					<option value="8">8</option>
-					<option value="9" selected>9</option>
-					<option value="10">10</option>
-					<option value="11">11</option>
-				</select></div>
-				<span class="seperator">:</span> 
-				<div class="select-wrapper"><select class="am-pm" id="morning_m">
-					<option value="0" selected>00</option>
-					<option value="5">05</option>
-					<option value="10">10</option>
-					<option value="15">15</option>
-					<option value="20">20</option>
-					<option value="25">25</option>
-					<option value="30">30</option>
-					<option value="35">35</option>
-					<option value="40">40</option>
-					<option value="45">45</option>
-					<option value="50">50</option>
-					<option value="55">55</option>
-				</select></div>
-				<span class="am-pm">AM</span>
-			</div>
-		</div>
-		<div class="input-container flex">
-			<div>
-				<h4>Evening time</h4>
-				<p>Choose the default hour to display for the evening.</p>
-			</div>
-			<div class="flex">
-				<div class="select-wrapper"><select class="am-pm" id="evening_h">
-					<option value="12">12</option>
-					<option value="13">1</option>
-					<option value="14">2</option>
-					<option value="15">3</option>
-					<option value="16">4</option>
-					<option value="17">5</option>
-					<option value="18" selected>6</option>
-					<option value="19">7</option>
-					<option value="20">8</option>
-					<option value="21">9</option>
-					<option value="22">10</option>
-					<option value="23">11</option>
-				</select></div>
-				<span class="seperator">:</span> 
-				<div class="select-wrapper"><select class="am-pm" id="evening_m">
-					<option value="0" selected>00</option>
-					<option value="5">05</option>
-					<option value="10">10</option>
-					<option value="15">15</option>
-					<option value="20">20</option>
-					<option value="25">25</option>
-					<option value="30">30</option>
-					<option value="35">35</option>
-					<option value="40">40</option>
-					<option value="45">45</option>
-					<option value="50">50</option>
-					<option value="55">55</option>
-				</select></div>
-				<span class="am-pm">PM</span>
-			</div>
-		</div>
-		<div class="input-container flex">
-			<div>
-				<h4>Time Format</h4>
-				<p><i>"Thank you for your service."</i></p>
-			</div>
-			<div class="select-wrapper"><select class="direct" id="hourFormat">
-				<option value="12" selected>12 Hour</option>
-				<option value="24">24 Hour</option>
-			</select></div>
-		</div>
-		<div class="input-container flex">
-			<div>
-				<h4>Week Starts on</h4>
-			</div>
-			<div class="select-wrapper"><select class="direct" id="weekStart">
-				<option value="0">Sunday</option>
-				<option value="1">Monday</option>
-				<option value="2">Tuesday</option>
-				<option value="3">Wednesday</option>
-				<option value="4">Thursday</option>
-				<option value="5">Friday</option>
-				<option value="6">Saturday</option>
-			</select></div>
-		</div>
-		<div class="input-container flex">
-			<div>
-				<h4>Close popup automatically after</h4>
-				<p>Choose to see an animation before closing the Doze Tabs popup.</p>
-				<p>You may close the popup at any time. Changes will always be saved.</p>
-			</div>
-			<div class="select-wrapper"><select class="direct" id="closeDelay">
-				<option value="1">0 seconds</option>
-				<option value="1000" selected>1 second</option>
-				<option value="2000">2 seconds</option>
-			</select></div>
-		</div>
-		<div class="input-container flex">
-			<div>
-				<h4>Icon Theme</h4>
-			</div>
-			<div class="select-wrapper"><select class="direct" id="icons">
-				<option value="human" selected>Humans</option>
-				<option value="animal">Animals</option>
-				<option value="hats">Hats</option>
-			</select></div>
-		</div>
-		<div class="input-container flex">
-			<div>
-				<h4>Extension Theme</h4>
-			</div>
-			<div class="select-wrapper"><select class="direct" id="theme">
-				<option value="light" selected>Light</option>
-				<option value="dark">Dark</option>
-				<option value="system">System</option>
-			</select></div>
-		</div>
-		<div class="input-container flex">
-			<div>
-				<h4>Doze Tabs Notifications</h4>
-				<p>Choose to see browser notifcations for tabs and windows waking up.</p>
-			</div>
-			<div class="select-wrapper"><select class="direct" id="notifications">
-				<option value="sound">Yes, with sound</option>
-				<option value="on" selected>Yes</option>
-				<option value="off">No</option>
-			</select></div>
-		</div>
-		<div class="input-container flex">
-			<div>
-				<h4>Show badge on Doze Tabs icon</h4>
-				<p>Choose if you want to see the number of snoozzed tabs<br> on top of the extension icon.</p>
-			</div>
-			<div class="select-wrapper"><select class="direct" id="badge">
-				<option value="disabled">None</option>
-				<option value="today" selected>Waking Up Today</option>
-				<option value="all">All Snoozed Tabs</option>
-			</select></div>
-		</div>
-		<div class="input-container flex" id="right-click">
-			<div>
-				<h4>Doze Tabs tabs using the right-click (context) menu</h4>
-				<p>The option will only appear when you click on a valid link<span></span>.</p>
-				<p>You may select up to five choices.</p>
-			</div>
-			<div tabindex="0" class="btn"><div></div></div>
-			<div id="contextMenu" class="choice-list">
-				<div><input type="checkbox" id="startup"><label for="startup"><span>On Browser Launch</span></label></div>
-				<div><input type="checkbox" id="in-an-hour"><label for="in-an-hour"><span>In One Hour</span></label></div>
-				<div><input type="checkbox" id="today-morning"><label for="today-morning"><span>This Morning</span></label></div>
-				<div><input type="checkbox" id="today-evening"><label for="today-evening"><span>This Evening</span></label></div>
-				<div><input type="checkbox" id="tom-morning"><label for="tom-morning"><span>Tomorrow Morning</span></label></div>
-				<div><input type="checkbox" id="tom-evening"><label for="tom-evening"><span>Tomorrow Evening</span></label></div>
-				<div><input type="checkbox" id="weekend"><label for="weekend">
-					<span>Weekend</span>
-					<div class="select-wrapper">
-						<select class="popup" id="popup_weekend">
-							<option value="morning">Morning</option>
-							<option value="evening">Evening</option>
-							<option value="now">Current Time</option>
-						</select>
-					</div>
-				</label></div>
-				<div><input type="checkbox" id="monday"><label for="monday">
-					<span>Next Monday</span>
-					<div class="select-wrapper">
-						<select class="popup" id="popup_monday">
-							<option value="morning">Morning</option>
-							<option value="evening">Evening</option>
-							<option value="now">Current Time</option>
-						</select>
-					</div>
-				</label></div>
-				<div><input type="checkbox" id="week"><label for="week">
-					<span>Next Week</span>
-					<div class="select-wrapper">
-						<select class="popup" id="popup_week">
-							<option value="morning">Morning</option>
-							<option value="evening">Evening</option>
-							<option value="now">Current Time</option>
-						</select>
-					</div>
-				</label></div>
-				<div><input type="checkbox" id="month"><label for="month">
-					<span>Next Month</span>
-					<div class="select-wrapper">
-						<select class="popup" id="popup_month">
-							<option value="morning">Morning</option>
-							<option value="evening">Evening</option>
-							<option value="now">Current Time</option>
-						</select>
-					</div>
-				</label></div>
-			</div>
-		</div>
-		<div class="input-container flex" id="shortcut">
-			<div>
-				<h4>Custom Keyboard Shortcuts</h4>
-				<p>Set up your own shortcuts to snooze a tab without any clicks.</p>
-			</div>
-			<div tabindex="0" class="btn"><div></div></div>
-			<div class="mini firefox-info">
-				<strong>Instructions</strong>
-				<div>Firefox shortcuts can only be <a target="_blank" href="https://support.mozilla.org/en-US/kb/manage-extension-shortcuts-firefox">configured</a> on a different page, outside of this extension. To configure your custom shortcuts:</div>
-				<ol>
-					<li>Open the Firefox Add-Ons page in a new tab: <u><code>about:addons</code></u> (Click URL to copy).</li>
-					<li>Click on the <a tabindex="0" target="_blank" href="https://bug1303384.bmoattachments.org/attachment.cgi?id=9051647">gear icon</a> in the top right and select <strong>Manage Extension Shortcuts</strong>.</li> 
-					<li>Configure shortcuts using your own preferred key bindings.</li>
-				</ol>
-			</div>
-			<div class="mini chrome-info">
-				<strong>Instructions</strong>
-				<div>Configure snooze time shortcuts on the <a tabindex="0" href="#" data-href="chrome://extensions/shortcuts">Extension Shortcuts</a> page.</div>
-			</div>
-			<div class="mini safari-info">
-				<strong>Uh Oh</strong>
-				<div>Shortcuts cannot be configured for extensions in Safari. You can blame Steve Jobs for this.</div>
-			</div>
-			<div class="mini shortcuts">
-				<strong>Currently active shortcuts</strong>
-				<div class="bindings"></div>
-			</div>
-		</div>
-		<div class="input-container hidden-input">
-			<div class="flex">
-				<div>
-					<h4>Storage</h4>
-					<p>Choose to save data in this browser only or across all synced browsers.</p>
-				</div>
-				<div class="select-wrapper"><select id="storage">
-					<option value="local">Local</option>
-				</select></div>
-			</div>
-			<div class="storage-available">
-				<div class="storage-used"></div>
-			</div>
-			<p class="storage-text">-</p>
-			<p class="storage-low hidden">Your storage is almost filled up. Consider changing your <a data-highlight="history">history</a> settings to free up some space.</p>
-			<p class="storage-full hidden">You have no free space to save more tabs. Delete your <a data-highlight="history">history</a> settings to free up some space.</p>
-		</div>
-		<div class="input-container flex">
-			<div>
-				<h4>Remove tabs in Doze Tabs history after</h4>
-				<p>Woken up tabs will be individually cleared after hanging around for this much time.</p>
-				<p>This setting <strong>only</strong> applies to Doze Tabs and <strong>will not</strong> modify your browser history.</p>
-			</div>
-			<div class="select-wrapper"><select class="direct" id="history">
-				<option value="1">24 Hours</option>
-				<option value="2">48 Hours</option>
-				<option value="3">72 Hours</option>
-				<option disabled>&nbsp;</option>
-				<option value="7">7 Days</option>
-				<option value="14" selected>14 Days</option>
-				<option disabled>&nbsp;</option>
-				<option value="30">1 Month</option>
-				<option value="90">3 Months</option>
-				<option value="182">6 Months</option>
-				<option disabled>&nbsp;</option>
-				<option value="365">1 Year</option>
-				<option value="99999">Never</option>
-			</select></div>
-		</div>
-		<div class="input-container flex">
-			<div>
-				<h4>Help make Doze Tabs better</h4>
-				<p>Doze Tabs <a target="_blank" href="https://dozetabs.vercel.app/stats">collects</a> anonymous click data in the popup.</p>
-				<p>All data collected is publicly available. Learn more on <a target="_blank" href="https://dozetabs.vercel.app/privacy">our website</a></p>
-			</div>
-			<div class="select-wrapper"><select class="direct" id="polling">
-				<option value="on" selected>Sure</option>
-				<option value="off">No I hate progress</option>
-			</select></div>
-		</div>
-		<div class="input-container flex">
-			<div>
-				<h4>Manage Doze Tabs Data</h4>
-				<p>Import or Export tabs from this device.</p>
-				<p>No data will be deleted when you peform this action.</p>
-				<p>Any duplicate tabs will be intelligently combined with your existing data.</p>
-			</div>
-			<div class="flex">
-				<input type="file" accept="text/plain" id="import_hidden">
-				<div tabindex="0" id="import" class="full-btn"><div>Import</div></div>
-				<div tabindex="0" id="export" class="full-btn"><div>Export</div></div>
-			</div>
-		</div>
-		<div class="reset-container center">
-			<a tabindex="0" id="reset">reset settings to default</a>
-		</div>
-	</div><br>
-	<div class="about-container center">
-		<h2><span>About</span></h2>
-		<p id="version"></p>
-		<div class="flex links">
-			<span><a target='_blank' href="https://dozetabs.vercel.app/">snooozz.me</a></span>
-			<span><a target='_blank' href="https://github.com/ghobs91/doze-tabs/">github</a></span>
-			<span><a target='_blank' href="https://dozetabs.vercel.app/changelog.html">changelog</a></span>
-			<span><a target='_blank' href="https://github.com/ghobs91/doze-tabs/issues/new/choose">report a bug</a></span>
-			<span><a target='_blank' href="https://dozetabs.vercel.app/privacy">privacy</a></span>
-			<span><a target='_blank' href="https://dozetabs.vercel.app/attribution">attribution</a></span>
-			<span><a target='_blank' href="https://github.com/ghobs91/doze-tabs/blob/master/LICENSE">license</a></span>
-		</div>
-		<div class="flex me">
-			<span><span class="fake-emoji">&nbsp;</span>Developed by <a target='blank' href="https://rohan.xyz">rohan</a></span>
-			<span>Built with <span class="emoji"></span> in Mumbai</span>
-			<span><a target="_blank" href="https://www.buymeacoffee.com/rohanb10">Donate</a> to Snoozz<span class="fake-emoji">&nbsp;</span></span>
-		</div>
-	</div>
-	<div class="copied">Copied to clipboard</div>
-	<div class="import-success">Succesfully imported tabs from <span></span>.</div>
-	<div class="import-fail">Unable to import tabs from this file.<br>Please select another one.</div>
-	<script type="text/javascript" src="../scripts/dayjs.min.js"></script>
-	<script type="text/javascript" src="../scripts/common.js"></script>
-	<script type="text/javascript" src="../scripts/settings.js"></script>
-</body>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>settings | doze</title>
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="96x96"
+            href="../icons/ext-icon-128.png"
+        />
+        <link rel="stylesheet" href="../styles/common.css" />
+        <link rel="stylesheet" href="../styles/settings.css" />
+    </head>
+    <body>
+        <div class="scroll-logo hidden"><img src="../icons/logo.svg" /></div>
+        <div class="flex center">
+            <img class="snoozz-logo hoverable" src="../icons/logo.svg" />
+            <img class="snoozz-text" src="../icons/snoozz.png" />
+        </div>
+        <div
+            tabindex="0"
+            class="nap-room"
+            data-href="/html/nap-room.html"
+            data-hover="See your sleeping tabs"
+        >
+            <img
+                data-href="/html/nap-room.html"
+                src="../icons/human/nap-room.png"
+            />
+        </div>
+        <div class="settings-container">
+            <h2 class="center"><span>Settings</span></h2>
+            <br />
+            <div class="input-container flex">
+                <div>
+                    <h4>Morning time</h4>
+                    <p>Choose the default hour to display for the morning.</p>
+                </div>
+                <div class="flex">
+                    <div class="select-wrapper">
+                        <select class="am-pm" id="morning_h">
+                            <option value="0">12</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9" selected>9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                        </select>
+                    </div>
+                    <span class="seperator">:</span>
+                    <div class="select-wrapper">
+                        <select class="am-pm" id="morning_m">
+                            <option value="0" selected>00</option>
+                            <option value="5">05</option>
+                            <option value="10">10</option>
+                            <option value="15">15</option>
+                            <option value="20">20</option>
+                            <option value="25">25</option>
+                            <option value="30">30</option>
+                            <option value="35">35</option>
+                            <option value="40">40</option>
+                            <option value="45">45</option>
+                            <option value="50">50</option>
+                            <option value="55">55</option>
+                        </select>
+                    </div>
+                    <span class="am-pm">AM</span>
+                </div>
+            </div>
+            <div class="input-container flex">
+                <div>
+                    <h4>Evening time</h4>
+                    <p>Choose the default hour to display for the evening.</p>
+                </div>
+                <div class="flex">
+                    <div class="select-wrapper">
+                        <select class="am-pm" id="evening_h">
+                            <option value="12">12</option>
+                            <option value="13">1</option>
+                            <option value="14">2</option>
+                            <option value="15">3</option>
+                            <option value="16">4</option>
+                            <option value="17">5</option>
+                            <option value="18" selected>6</option>
+                            <option value="19">7</option>
+                            <option value="20">8</option>
+                            <option value="21">9</option>
+                            <option value="22">10</option>
+                            <option value="23">11</option>
+                        </select>
+                    </div>
+                    <span class="seperator">:</span>
+                    <div class="select-wrapper">
+                        <select class="am-pm" id="evening_m">
+                            <option value="0" selected>00</option>
+                            <option value="5">05</option>
+                            <option value="10">10</option>
+                            <option value="15">15</option>
+                            <option value="20">20</option>
+                            <option value="25">25</option>
+                            <option value="30">30</option>
+                            <option value="35">35</option>
+                            <option value="40">40</option>
+                            <option value="45">45</option>
+                            <option value="50">50</option>
+                            <option value="55">55</option>
+                        </select>
+                    </div>
+                    <span class="am-pm">PM</span>
+                </div>
+            </div>
+            <div class="input-container flex">
+                <div>
+                    <h4>Time Format</h4>
+                    <p><i>"Thank you for your service."</i></p>
+                </div>
+                <div class="select-wrapper">
+                    <select class="direct" id="hourFormat">
+                        <option value="12" selected>12 Hour</option>
+                        <option value="24">24 Hour</option>
+                    </select>
+                </div>
+            </div>
+            <div class="input-container flex">
+                <div>
+                    <h4>Week Starts on</h4>
+                </div>
+                <div class="select-wrapper">
+                    <select class="direct" id="weekStart">
+                        <option value="0">Sunday</option>
+                        <option value="1">Monday</option>
+                        <option value="2">Tuesday</option>
+                        <option value="3">Wednesday</option>
+                        <option value="4">Thursday</option>
+                        <option value="5">Friday</option>
+                        <option value="6">Saturday</option>
+                    </select>
+                </div>
+            </div>
+            <div class="input-container flex">
+                <div>
+                    <h4>Close popup automatically after</h4>
+                    <p>
+                        Choose to see an animation before closing the Doze Tabs
+                        popup.
+                    </p>
+                    <p>
+                        You may close the popup at any time. Changes will always
+                        be saved.
+                    </p>
+                </div>
+                <div class="select-wrapper">
+                    <select class="direct" id="closeDelay">
+                        <option value="1">0 seconds</option>
+                        <option value="1000" selected>1 second</option>
+                        <option value="2000">2 seconds</option>
+                    </select>
+                </div>
+            </div>
+            <div class="input-container flex">
+                <div>
+                    <h4>Icon Theme</h4>
+                </div>
+                <div class="select-wrapper">
+                    <select class="direct" id="icons">
+                        <option value="human" selected>Humans</option>
+                        <option value="animal">Animals</option>
+                        <option value="hats">Hats</option>
+                    </select>
+                </div>
+            </div>
+            <div class="input-container flex">
+                <div>
+                    <h4>Extension Theme</h4>
+                </div>
+                <div class="select-wrapper">
+                    <select class="direct" id="theme">
+                        <option value="light" selected>Light</option>
+                        <option value="dark">Dark</option>
+                        <option value="system">System</option>
+                    </select>
+                </div>
+            </div>
+            <div class="input-container flex">
+                <div>
+                    <h4>Doze Tabs Notifications</h4>
+                    <p>
+                        Choose to see browser notifcations for tabs and windows
+                        waking up.
+                    </p>
+                </div>
+                <div class="select-wrapper">
+                    <select class="direct" id="notifications">
+                        <option value="sound">Yes, with sound</option>
+                        <option value="on" selected>Yes</option>
+                        <option value="off">No</option>
+                    </select>
+                </div>
+            </div>
+            <div class="input-container flex">
+                <div>
+                    <h4>Show badge on Doze Tabs icon</h4>
+                    <p>
+                        Choose if you want to see the number of doze tabs<br />
+                        on top of the extension icon.
+                    </p>
+                </div>
+                <div class="select-wrapper">
+                    <select class="direct" id="badge">
+                        <option value="disabled">None</option>
+                        <option value="today" selected>Waking Up Today</option>
+                        <option value="all">All Snoozed Tabs</option>
+                    </select>
+                </div>
+            </div>
+            <div class="input-container flex" id="right-click">
+                <div>
+                    <h4>Doze Tabs tabs using the right-click (context) menu</h4>
+                    <p>
+                        The option will only appear when you click on a valid
+                        link<span></span>.
+                    </p>
+                    <p>You may select up to five choices.</p>
+                </div>
+                <div tabindex="0" class="btn"><div></div></div>
+                <div id="contextMenu" class="choice-list">
+                    <div>
+                        <input type="checkbox" id="startup" /><label
+                            for="startup"
+                            ><span>On Browser Launch</span></label
+                        >
+                    </div>
+                    <div>
+                        <input type="checkbox" id="in-an-hour" /><label
+                            for="in-an-hour"
+                            ><span>In One Hour</span></label
+                        >
+                    </div>
+                    <div>
+                        <input type="checkbox" id="today-morning" /><label
+                            for="today-morning"
+                            ><span>This Morning</span></label
+                        >
+                    </div>
+                    <div>
+                        <input type="checkbox" id="today-evening" /><label
+                            for="today-evening"
+                            ><span>This Evening</span></label
+                        >
+                    </div>
+                    <div>
+                        <input type="checkbox" id="tom-morning" /><label
+                            for="tom-morning"
+                            ><span>Tomorrow Morning</span></label
+                        >
+                    </div>
+                    <div>
+                        <input type="checkbox" id="tom-evening" /><label
+                            for="tom-evening"
+                            ><span>Tomorrow Evening</span></label
+                        >
+                    </div>
+                    <div>
+                        <input type="checkbox" id="weekend" /><label
+                            for="weekend"
+                        >
+                            <span>Weekend</span>
+                            <div class="select-wrapper">
+                                <select class="popup" id="popup_weekend">
+                                    <option value="morning">Morning</option>
+                                    <option value="evening">Evening</option>
+                                    <option value="now">Current Time</option>
+                                </select>
+                            </div>
+                        </label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="monday" /><label
+                            for="monday"
+                        >
+                            <span>Next Monday</span>
+                            <div class="select-wrapper">
+                                <select class="popup" id="popup_monday">
+                                    <option value="morning">Morning</option>
+                                    <option value="evening">Evening</option>
+                                    <option value="now">Current Time</option>
+                                </select>
+                            </div>
+                        </label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="week" /><label for="week">
+                            <span>Next Week</span>
+                            <div class="select-wrapper">
+                                <select class="popup" id="popup_week">
+                                    <option value="morning">Morning</option>
+                                    <option value="evening">Evening</option>
+                                    <option value="now">Current Time</option>
+                                </select>
+                            </div>
+                        </label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="month" /><label for="month">
+                            <span>Next Month</span>
+                            <div class="select-wrapper">
+                                <select class="popup" id="popup_month">
+                                    <option value="morning">Morning</option>
+                                    <option value="evening">Evening</option>
+                                    <option value="now">Current Time</option>
+                                </select>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="input-container flex" id="shortcut">
+                <div>
+                    <h4>Custom Keyboard Shortcuts</h4>
+                    <p>
+                        Set up your own shortcuts to snooze a tab without any
+                        clicks.
+                    </p>
+                </div>
+                <div tabindex="0" class="btn"><div></div></div>
+                <div class="mini firefox-info">
+                    <strong>Instructions</strong>
+                    <div>
+                        Firefox shortcuts can only be
+                        <a
+                            target="_blank"
+                            href="https://support.mozilla.org/en-US/kb/manage-extension-shortcuts-firefox"
+                            >configured</a
+                        >
+                        on a different page, outside of this extension. To
+                        configure your custom shortcuts:
+                    </div>
+                    <ol>
+                        <li>
+                            Open the Firefox Add-Ons page in a new tab:
+                            <u><code>about:addons</code></u> (Click URL to
+                            copy).
+                        </li>
+                        <li>
+                            Click on the
+                            <a
+                                tabindex="0"
+                                target="_blank"
+                                href="https://bug1303384.bmoattachments.org/attachment.cgi?id=9051647"
+                                >gear icon</a
+                            >
+                            in the top right and select
+                            <strong>Manage Extension Shortcuts</strong>.
+                        </li>
+                        <li>
+                            Configure shortcuts using your own preferred key
+                            bindings.
+                        </li>
+                    </ol>
+                </div>
+                <div class="mini chrome-info">
+                    <strong>Instructions</strong>
+                    <div>
+                        Configure snooze time shortcuts on the
+                        <a
+                            tabindex="0"
+                            href="#"
+                            data-href="chrome://extensions/shortcuts"
+                            >Extension Shortcuts</a
+                        >
+                        page.
+                    </div>
+                </div>
+                <div class="mini safari-info">
+                    <strong>Uh Oh</strong>
+                    <div>
+                        Shortcuts cannot be configured for extensions in Safari.
+                        You can blame Steve Jobs for this.
+                    </div>
+                </div>
+                <div class="mini shortcuts">
+                    <strong>Currently active shortcuts</strong>
+                    <div class="bindings"></div>
+                </div>
+            </div>
+            <div class="input-container hidden-input">
+                <div class="flex">
+                    <div>
+                        <h4>Storage</h4>
+                        <p>
+                            Choose to save data in this browser only or across
+                            all synced browsers.
+                        </p>
+                    </div>
+                    <div class="select-wrapper">
+                        <select id="storage">
+                            <option value="local">Local</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="storage-available">
+                    <div class="storage-used"></div>
+                </div>
+                <p class="storage-text">-</p>
+                <p class="storage-low hidden">
+                    Your storage is almost filled up. Consider changing your
+                    <a data-highlight="history">history</a> settings to free up
+                    some space.
+                </p>
+                <p class="storage-full hidden">
+                    You have no free space to save more tabs. Delete your
+                    <a data-highlight="history">history</a> settings to free up
+                    some space.
+                </p>
+            </div>
+            <div class="input-container flex">
+                <div>
+                    <h4>Remove tabs in Doze Tabs history after</h4>
+                    <p>
+                        Woken up tabs will be individually cleared after hanging
+                        around for this much time.
+                    </p>
+                    <p>
+                        This setting <strong>only</strong> applies to Doze Tabs
+                        and <strong>will not</strong> modify your browser
+                        history.
+                    </p>
+                </div>
+                <div class="select-wrapper">
+                    <select class="direct" id="history">
+                        <option value="1">24 Hours</option>
+                        <option value="2">48 Hours</option>
+                        <option value="3">72 Hours</option>
+                        <option disabled>&nbsp;</option>
+                        <option value="7">7 Days</option>
+                        <option value="14" selected>14 Days</option>
+                        <option disabled>&nbsp;</option>
+                        <option value="30">1 Month</option>
+                        <option value="90">3 Months</option>
+                        <option value="182">6 Months</option>
+                        <option disabled>&nbsp;</option>
+                        <option value="365">1 Year</option>
+                        <option value="99999">Never</option>
+                    </select>
+                </div>
+            </div>
+            <div class="input-container flex">
+                <div>
+                    <h4>Help make Doze Tabs better</h4>
+                    <p>
+                        Doze Tabs
+                        <a
+                            target="_blank"
+                            href="https://dozetabs.vercel.app/stats"
+                            >collects</a
+                        >
+                        anonymous click data in the popup.
+                    </p>
+                    <p>
+                        All data collected is publicly available. Learn more on
+                        <a
+                            target="_blank"
+                            href="https://dozetabs.vercel.app/privacy"
+                            >our website</a
+                        >
+                    </p>
+                </div>
+                <div class="select-wrapper">
+                    <select class="direct" id="polling">
+                        <option value="on" selected>Sure</option>
+                        <option value="off">No I hate progress</option>
+                    </select>
+                </div>
+            </div>
+            <div class="input-container flex">
+                <div>
+                    <h4>Manage Doze Tabs Data</h4>
+                    <p>Import or Export tabs from this device.</p>
+                    <p>No data will be deleted when you peform this action.</p>
+                    <p>
+                        Any duplicate tabs will be intelligently combined with
+                        your existing data.
+                    </p>
+                </div>
+                <div class="flex">
+                    <input type="file" accept="text/plain" id="import_hidden" />
+                    <div tabindex="0" id="import" class="full-btn">
+                        <div>Import</div>
+                    </div>
+                    <div tabindex="0" id="export" class="full-btn">
+                        <div>Export</div>
+                    </div>
+                </div>
+            </div>
+            <div class="reset-container center">
+                <a tabindex="0" id="reset">reset settings to default</a>
+            </div>
+        </div>
+        <br />
+        <div class="about-container center">
+            <h2><span>About</span></h2>
+            <p id="version"></p>
+            <div class="flex links">
+                <span
+                    ><a target="_blank" href="https://dozetabs.vercel.app/"
+                        >snooozz.me</a
+                    ></span
+                >
+                <span
+                    ><a
+                        target="_blank"
+                        href="https://github.com/ghobs91/doze-tabs/"
+                        >github</a
+                    ></span
+                >
+                <span
+                    ><a
+                        target="_blank"
+                        href="https://dozetabs.vercel.app/changelog.html"
+                        >changelog</a
+                    ></span
+                >
+                <span
+                    ><a
+                        target="_blank"
+                        href="https://github.com/ghobs91/doze-tabs/issues/new/choose"
+                        >report a bug</a
+                    ></span
+                >
+                <span
+                    ><a
+                        target="_blank"
+                        href="https://dozetabs.vercel.app/privacy"
+                        >privacy</a
+                    ></span
+                >
+                <span
+                    ><a
+                        target="_blank"
+                        href="https://dozetabs.vercel.app/attribution"
+                        >attribution</a
+                    ></span
+                >
+                <span
+                    ><a
+                        target="_blank"
+                        href="https://github.com/ghobs91/doze-tabs/blob/master/LICENSE"
+                        >license</a
+                    ></span
+                >
+            </div>
+            <div class="flex me">
+                <span
+                    ><span class="fake-emoji">&nbsp;</span>Developed by
+                    <a target="blank" href="https://rohan.xyz">rohan</a></span
+                >
+                <span>Built with <span class="emoji"></span> in Mumbai</span>
+                <span
+                    ><a
+                        target="_blank"
+                        href="https://www.buymeacoffee.com/rohanb10"
+                        >Donate</a
+                    >
+                    to Snoozz<span class="fake-emoji">&nbsp;</span></span
+                >
+            </div>
+        </div>
+        <div class="copied">Copied to clipboard</div>
+        <div class="import-success">
+            Succesfully imported tabs from <span></span>.
+        </div>
+        <div class="import-fail">
+            Unable to import tabs from this file.<br />Please select another
+            one.
+        </div>
+        <script type="text/javascript" src="../scripts/dayjs.min.js"></script>
+        <script type="text/javascript" src="../scripts/common.js"></script>
+        <script type="text/javascript" src="../scripts/settings.js"></script>
+    </body>
 </html>
